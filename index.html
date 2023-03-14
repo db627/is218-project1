@@ -10,48 +10,112 @@
     <meta name="authors" content = "Dennis Boguslavskiy Paul W">
     <meta name="description" content = "A project to help educators integrate new technologies into their teaching">
 <!-- ---------------------------------------------------------------------------------------------------------->
-    <link rel="stylesheet" href="style.css">
+    <!--<link rel="stylesheet" href="style.css">-->
+    <link rel="stylesheet" href="/src/assets/css/style.css">
 <!-- ---------------------------------------------------------------------------------------------------------->
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+  body{
+    background-color: rgb(225, 225, 225);
+  }
+  h1{
+    font-family: 'Space Mono', monospace;
+    font-weight: bold;
+  }
+  h2{
+    font-family: 'Space Mono', monospace;
+    font-weight: bold;
+  }
+  h3{
+    font-family: 'Space Mono', monospace;
+    font-weight: bold;
+  }
+  h4{
+    font-family: 'Space Mono', monospace;
+    font-weight: bold;
+  }
+  h5{
+    font-family: 'Space Mono', monospace;
+    font-weight: bold;
+  }
+  h6{
+    font-family: 'Space Mono', monospace;
+    font-weight: bold;
+  }
+</style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <div class="container-fluid">
-          <a class="navbar-brand ms-4" href="index.html" style="color: rgb(37,37,41);">Home</a>
+        <div class="container-fluid ">
+          <a class="navbar-brand ms-4" href="index.html" style="color: rgb(0, 0, 0);">Home</a>
+          <!--rgb(37,37,41)-->
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="content.html" style="color: rgb(37,37,41);">Articles</a>
+                <a class="nav-link active" aria-current="page" href="content.html" style="color: rgb(0,0,0);">Articles</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="contact.html" style="color: rgb(37,37,41);">Contact</a>
+                <a class="nav-link active" aria-current="page" href="contact.html" style="color: rgb(0,0,0);">Contact</a>
               </li>
             </ul>
+            <!--
             <form class="d-flex" >
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" >
               <button class="btn btn-outline-success me-4" type="submit">Search</button>
             </form>
+            -->
           </div>
         </div>
       </nav>
-      <section>
-        <div class="p-4 align-items-center mb-5 bg-primary" >
-            <div class="p-lg-5 text-center">
+      <div id="spacer" class="bg-primary" style=" padding: 10vh;"></div>
+      <section class="">
+        <div class=" align-items-center" >
+            <div class="p-5 bg-primary" style="padding: 50vh;">
                 <h1>My Web Class</h1>
-                <article>
-                    <p>Empower your students with cutting-edge software engineering skills. Join MyWebClass and discover advanced technologies that will transform your teaching and their learning journey.</p>
+                <article style="font-size: 20px; font-family: 'Space Mono', monospace; ">
+                    <p>Empower your students with cutting-edge software engineering skills. <br>Join MyWebClass and discover advanced technologies that will transform your teaching and their learning journey.</p>
+<!--
+                    <h2 id="text-change">Learn: <span></span></h2>
+                    <style>
+                      #text-change {
+                        display: flex;
+                        justify-content: center;
+                        color: rgb(0, 0, 0);
+                      }
+                      
+                      span::before {
+                        content: "Project Management";
+                        animation: animate infinite 5s;
+                        padding-left: 10px;
+                      }
+                      
+                      @keyframes animate {
+                      
+                      0% {
+                      content: "Software Engineering";
+                      }
+                      
+                      50% {
+                      content: "Web Development";
+                      }
+                      
+                      }
+                    </style>
+-->
                 </article>
                 <div class="pt-3">
                     <button type="button" class="btn btn-dark" id="button-head"><a href="content.html" style="color:white; text-decoration: none;">Learn More</a></button>
                 </div>
             </div>
-            <div style="padding-bottom: 40vh;"></div>
+            <div class="bg-primary" style="padding-bottom: 20vh; "></div>
 
         </section>
-
-        <section>
+        <div class="spacer" style="background-color:rgb(248, 248, 248); padding: 10vh;"></div>
+        <section class="p-5 text-center " style="background-color: rgb(248, 248, 248);">
             <div class="text-center">
                 <h2>Featued Articles:</h2>
             </div>
@@ -108,9 +172,10 @@
                 </div>
               </div>
         </section>
+        <div class="spacer" style="background-color:rgb(248, 248, 248); padding: 10vh;"></div>
         <footer>
             <section>
-                <div class="p-4 align-items-center pb-5 bg-primary" style="margin-top: 40px; padding-top: 50px;" >
+                <div class="p-4 align-items-center pb-5 bg-primary" style="padding-top: 70px;" >
                      <div class="container">
                         <div class="row">
                             <div class="col">
@@ -143,6 +208,7 @@
                      </div>
                 </div>
                 </section>
+                <div id="spacer" class="bg-primary" style=" padding: 3vh;"></div>
         </footer>
 
         <!--
