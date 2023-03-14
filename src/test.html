@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Wavy Divider (with SVG element as divider inside the HTML)
+	</title>
+	<style type="text/css">
+.class1 {
+  background: rgb(199, 192, 192);
+}
+svg {
+  width: 100%;
+  height: 100%;
+}
+svg path {
+  fill: rgb(199, 192, 192);
+}
+.container {
+  --divider-height:4rem;
+  position: relative;
+  top: calc( var(--divider-height)/2 * -1 );
+  height: var(--divider-height);
+  width: 100%;
+    /* alternatively, could get rid of the rect, and move the svg container further down */
+  float: left;
+  z-index: 1;
+/*   outline: 1px solid red; */
+}
+/** Cosmetics **/
+* {
+  margin: 0;
+}
+.class1,.class2 {
+  padding: 50px;
+}
+div {
+  font-family: monospace;
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+.class1 {
+  color: white;
+}
+	</style>
+</head>
+<body>
+<div class="class1">
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	</p>
+</div>
+<div class="container">
+  <svg viewBox="0 70 500 60" preserveAspectRatio="none">
+    <rect x="0" y="0" width="500" height="500" style="stroke: none;" />
+    <path d="M0,100 C150,200 350,0 500,100 L500,00 L0,0 Z" style="stroke: none;"></path>
+  </svg>
+</div>
