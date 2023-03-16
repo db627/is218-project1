@@ -49,25 +49,31 @@
 </head>
 <body>
       <div class="d-flex justify-content-center">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-          <div class="container-fluid">
-            <a class="navbar-brand ms-4" href="index.html" style="color: rgb(0, 0, 0);">Home</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="content.html" style="color: rgb(0,0,0);">Articles</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="contact.html" style="color: rgb(0,0,0);">Contact</a>
-                </li>
-              </ul>
+        <div class="d-flex justify-content-center">
+          <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href=""></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="content.html">Articles</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                  </li>
+                </ul>
+              </div>
             </div>
-          </div>
-        </nav>
-      </div>    
+          </nav>
+        </div>
+      </div>
       <div class="spacer" style="background-color:rgb(248, 248, 248); padding: 5vh;"></div>
       <div class="" style="padding: 5vh; background-color: rgb(248, 248, 248)">
         <form class="">
@@ -88,8 +94,8 @@
               </div>
           </div>
           <div class="row p-4">
-              <div class="col">
-                  <input class="form-control" id="Email" placeholder="Email" type="text">
+              <div class="col input-group">
+                  <textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder="Enter your message: "></textarea>
               </div>
           </div>
           <div class="text-center">
