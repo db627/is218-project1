@@ -53,6 +53,23 @@
   </head>
 
   <body>
+    <header>
+      <div id="google_translate_element" class="float-end"></div>
+      <script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement(
+            { pageLanguage: "en" },
+            "google_translate_element"
+          );
+        }
+      </script>
+
+      <script
+        type="text/javascript"
+        src="https://translate.google.com/translate_a/element.js?
+cb=googleTranslateElementInit"
+      ></script>
+    </header>
     <nav class="navbar navbar-expand-lg bg-light shadow pe-5">
       <div class="container-fluid">
         <a class="navbar-brand" href="index.html">MyWebClass</a>
@@ -299,7 +316,9 @@
           </div>
         </div>
       </section>
-      <div class="text-center text-black bg-primary"><p>&copy; 2023 MyWebClass.org</p></div>
+      <div class="text-center text-black bg-primary">
+        <p>&copy; 2023 MyWebClass.org</p>
+      </div>
     </footer>
 
     <style>
