@@ -55,6 +55,7 @@
   <body>
     <header>
       <div id="google_translate_element" class="float-end"></div>
+
       <script type="text/javascript">
         function googleTranslateElementInit() {
           new google.translate.TranslateElement(
@@ -69,6 +70,7 @@
         src="https://translate.google.com/translate_a/element.js?
 cb=googleTranslateElementInit"
       ></script>
+
     </header>
     <nav class="navbar navbar-expand-lg bg-light shadow pe-5">
       <div class="container-fluid">
@@ -105,6 +107,22 @@ cb=googleTranslateElementInit"
       </div>
     </nav>
 
+    <div class="cookie-popup-container bg-secondary m-5 rounded p-3">
+      <div class="cookie-popup">
+        <p>
+          This website uses cookies to ensure you get the best experience on our
+          website. <a href="privacy.html">Learn More</a>
+        </p>
+        <button
+          class="btn btn-primary align-items-center"
+          id="accept-cookies-btn"
+        >
+          Accept Cookies
+        </button>
+      </div>
+      <script src="src/assets/js/cookies.js"></script>
+    </div>
+
     <section class="top-header m-5 d-flex justify-content-center">
       <div class="container my-5">
         <div class="row p-4 pb-0 pe-lg-0 pt-lg-0 align-items-center">
@@ -130,7 +148,7 @@ cb=googleTranslateElementInit"
             <img
               class="img-fluid fade-in"
               src="src/assets/image-project1.png"
-              alt="a teacher with students"
+              alt="A teacher instructing a student"
               width="720"
             />
           </div>
