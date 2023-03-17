@@ -46,64 +46,60 @@
 </style>
 </head>
 <body>
-      <div class="d-flex justify-content-center">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-          <div class="container-fluid">
-            <a class="navbar-brand ms-4" href="index.html" style="color: rgb(0, 0, 0);">Home</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="content.html" style="color: rgb(0,0,0);">Articles</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="contact.html" style="color: rgb(0,0,0);">Contact</a>
-                </li>
-              </ul>
-            </div>
+      <nav class="navbar navbar-expand-lg bg-light shadow pe-5">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">MyWebClass</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav justify-content-end">
+              <li class="nav-item">
+                <a class="nav-link active text-black" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-black" href="content.html">Article</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-black" href="contact.html">Contact</a>
+              </li>
+            </ul>
           </div>
-        </nav>
-      </div>    
-      <div id="spacer" class="bg-primary" style=" padding: 7 vh;"></div>
+        </div>
+      </nav>
+
       <section class="top-header m-5 d-flex justify-content-center">
-        <div class="row container justify-content-center align-content-center">
-          <div class="col">
-            <section>
-              <div>
-                <div class="m-5 bg-primary" >
-                  <h1>My Web Class</h1>
-                  <article style="font-size: 20px; font-family: 'Space Mono', monospace; ">
-                    <p>Empower your students with cutting-edge software engineering skills. <br>Join MyWebClass and discover
-                      advanced technologies that will transform your teaching and their learning journey.</p>
-                  </article>
-                  <div class="pt-3">
-                    <button type="button" class="btn btn-dark" id="button-head">
-                      <a href="content.html" style="color:white; text-decoration: none;">Learn More</a>
-                    </button>
-                  </div>
-                </div>
-            </section>
-          </div>
-          <div class="col bg-primary justify-content-center">
-            <div id="img-container">
-              <img src="src/assets/image-project1.png" alt="home-image-mywebclass"  width="500px" class="">
+        <div class="container my-5">
+          <div class="row p-4 pb-0 pe-lg-0 pt-lg-0 align-items-center ">
+            <div class="col-lg-7 p-3 p-lg-3 pt-lg-1">
+              <h1 class="display-6 fw-bold lh-1">My Web Class</h1>
+              <p class="lead" style="font-family: 'Space Mono', monospace; ">Empower your students with cutting-edge software
+                engineering skills. <br>Join MyWebClass and discover
+                advanced technologies that will transform your teaching and their learning journey.</p>
+              <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
+                <button type="button" class="btn btn-success btn-lg px-4 me-md-2 fw-bold">Start
+                  Here
+                </button>
+              </div>
+            </div>
+            <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden">
+              <img class="img-fluid fade-in" src="src/assets/image-project1.png" alt="a teacher with students" width="720">
             </div>
           </div>
-          <div class="bg-primary" style="padding-bottom: 5vh; "></div>
         </div>
       </section>
-      
+
+
         <div class="spacer" style="background-color:rgb(248, 248, 248); padding: 2vh;"></div>
         <section class="text-center " style="background-color: rgb(248, 248, 248);">
             <div class="text-center" style="padding-bottom: 3vh;">
                 <h2>Featued Articles:</h2>
             </div>
             <div class="container">
-                <div class="row">
-                  <div class="col">
-                    <section class="m-1">
+                <div class="row p-4 pb-0 pe-lg-0 pt-lg-0 align-items-center">
+                  <div class="col p-3 p-lg-3 pt-lg-1">
+                    <section class="">
                         <div class="card" style="width: 18rem;">
                             <div class="card-body">
                               <h5 class="card-title">Article</h5>
@@ -156,7 +152,7 @@
         <div class="spacer" style="background-color:rgb(248, 248, 248); padding: 10vh;"></div>
         <footer>
             <section>
-                <div class="p-4 align-items-center pb-5 bg-primary" style="padding-top: 70px;" >
+                <div class="p-4 align-items-center pb-5 bg-primary shadow-lg" style="padding-top: 70px;" >
                      <div class="container">
                         <div class="row">
                             <div class="col">
@@ -212,6 +208,7 @@
 
 <!-- ---------------------------------------------------------------------------------------------------------->
     <script src=".assets/js/main.js"></script>
+    <script src="/src/assets/js/cookies.js"></script>
 <!-- ---------------------------------------------------------------------------------------------------------->
 </body>
 </html>

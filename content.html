@@ -15,33 +15,32 @@
 </head>
 
 <body>
-  <div class="d-flex justify-content-center">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-      <div class="container-fluid">
-        <a class="navbar-brand ms-4" href="index.html" style="color: rgb(0, 0, 0);">Home</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="content.html" style="color: rgb(0,0,0);">Articles</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="contact.html" style="color: rgb(0,0,0);">Contact</a>
-            </li>
-          </ul>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">Home</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="content.html">Articles</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
         </div>
-      </div>
-    </nav>
-  </div> 
+      </nav>
 
       
       <div class="row">
-        <div class="col-md-3 col-lg-2 ps-5">
-          <nav class="" id="toc_menu" style="background-color: rgb(186, 186, 186); color: black;">
-            <div class="position-sticky pt-3 ">
-                <h2 class="" style="color: black;">Navigation</h2>
+          <nav class="col-md-2 col-lg-2 d-md-block bg-light sidebar collapse position-fixed" id="toc_menu">
+            <div class="position-sticky pt-3">
+              <h2 class="justify-left">Navigation</h2>
+              <!-- Javascript builds out the navigation items -->
             </div>
           </nav>
         </div>
