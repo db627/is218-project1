@@ -1,269 +1,394 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MyWebClass: Revolutianized Teaching Solutions</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MyWebClass: Revolutianized Teaching Solutions</title>
+    <meta name="keywords" content="My Webclass Homepage" />
+    <meta name="authors" content="Dennis Boguslavskiy Paul W" />
+    <meta
+      name="description"
+      content="An innovative initiative aimed at supporting educators in seamlessly integrating cutting-edge technologies into their teaching methodologies."
+    />
 
-  <meta name="keywords" content="My Webclass Homepage" />
-  <meta name="authors" content="Dennis Boguslavskiy Paul W" />
-  <meta name="description"
-    content="An innovative initiative aimed at supporting educators in seamlessly integrating cutting-edge technologies into their teaching methodologies." />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="src/images/favicon/favicon.ico"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="src/images/favicon/apple-touch-icon.png"
+    />
+    <!-- ---------------------------------------------------------------------------------------------------------->
+    <link rel="stylesheet" href="style.css" />
+    <!--<link rel="stylesheet" href="/src/css/style.css">-->
+    <!-- ---------------------------------------------------------------------------------------------------------->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
 
-  <link rel="icon" type="image/x-icon" href="src/images/favicon/favicon.ico">
-  <link rel="apple-touch-icon" href="src/images/favicon/apple-touch-icon.png">
-  <!-- ---------------------------------------------------------------------------------------------------------->
-  <link rel="stylesheet" href="style.css" />
-  <!--<link rel="stylesheet" href="/src/css/style.css">-->
-  <!-- ---------------------------------------------------------------------------------------------------------->
-  <style>
-    @import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
-
-    h1 {
-      font-family: "Space Mono", monospace;
-      font-weight: bold;
-    }
-
-    h2 {
-      font-family: "Space Mono", monospace;
-      font-weight: bold;
-    }
-
-    h3 {
-      font-family: "Space Mono", monospace;
-      font-weight: bold;
-    }
-
-    h4 {
-      font-family: "Space Mono", monospace;
-      font-weight: bold;
-    }
-
-    h5 {
-      font-family: "Space Mono", monospace;
-      font-weight: bold;
-    }
-
-    h6 {
-      font-family: "Space Mono", monospace;
-      font-weight: bold;
-    }
-  </style>
-</head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-794EBZNLL1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() { dataLayer.push(arguments); }
-  gtag('js', new Date());
-
-  gtag('config', 'G-794EBZNLL1');
-</script>
-
-<body>
-  <header>
-    <div id="google_translate_element" class="float-end"></div>
-
-    <script type="text/javascript">
-      function googleTranslateElementInit() {
-        new google.translate.TranslateElement(
-          { pageLanguage: "en" },
-          "google_translate_element"
-        );
+      h1 {
+        font-family: "Space Mono", monospace;
+        font-weight: bold;
       }
-    </script>
 
-    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?
-cb=googleTranslateElementInit"></script>
-  </header>
-  
-  <nav class="navbar navbar-expand-lg bg-light shadow pe-5">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">MyWebClass</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav justify-content-end">
-          <li class="nav-item">
-            <a class="nav-link active text-black" aria-current="page" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-black" href="contentpage.html">Article</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-black" href="contact.html">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+      h2 {
+        font-family: "Space Mono", monospace;
+        font-weight: bold;
+      }
 
-  <div class="cookie-popup-container bg-secondary m-5 rounded p-3">
-    <div class="cookie-popup">
-      <p>
-        This website uses cookies to ensure you get the best experience on our
-        website.
-        <a href="privacy.html" class="text-dark" alt="Learn more about why we collect cookies.">Learn More</a>
-      </p>
-      <button class="btn btn-primary align-items-center" id="accept-cookies-btn">
-        Accept Cookies
-      </button>
-    </div>
-    <script src="src/js/cookies.js"></script>
-  </div>
+      h3 {
+        font-family: "Space Mono", monospace;
+        font-weight: bold;
+      }
 
-  <section class="top-header m-5 d-flex justify-content-center">
-    <div class="container my-5">
-      <div class="row p-4 pb-0 pe-lg-0 pt-lg-0 align-items-center">
-        <div class="col-lg-7 p-3 p-lg-3 pt-lg-1">
-          <h1 class="display-6 fw-bold lh-1 pt-5">My Web Class: Revolutianized Teaching Solutions</h1>
-          <p class="lead" style="font-family: 'Space Mono', monospace">
-            Empower your students with cutting-edge software engineering
-            skills. <br />Join MyWebClass and discover advanced technologies
-            that will transform your teaching and their learning journey.
-          </p>
-          <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
-            <button type="button" class="btn btn-success btn-lg px-4 me-md-2 fw-bold" style="background-color: blue">
-              <a href="contentpage.html" alt="Explore our articles">Start Here</a>
-            </button>
-          </div>
-        </div>
-        <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden">
-          <img class="img-fluid fade-in" src="src/images/image-project1.jpg" alt="A teacher instructing a student"
-            width="720px" height="auto" />
-        </div>
-      </div>
-    </div>
-  </section>
-  <div class="spacer bg-secondary" style="padding: 2vh"></div>
+      h4 {
+        font-family: "Space Mono", monospace;
+        font-weight: bold;
+      }
 
+      h5 {
+        font-family: "Space Mono", monospace;
+        font-weight: bold;
+      }
 
-  <section class="py-5 bg-secondary">
-    <div class="container mx-auto">
-      <h2 class="text-3xl font-bold mb-4">Featured Articles</h2>
-      <div class="row row-cols-1 row-cols-md-3 g-4">
-        <div class="col">
-          <div class="card h-100">
-            <img src="src/1.png" class="card-img-top rounded-top" alt="Featured Article">
-            <div class="card-body">
-              <a href="#" class="card-title text-xl font-bold text-gray-900 mb-2 hover:text-blue-600"
-                style="color: black;">Article Title</a>
-              <p class="card-text text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua.</p>
-              <a href="#" class="btn btn-primary mt-2 font-bold hover:underline">Read More</a>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
-            <img src="src/2.png" class="card-img-top rounded-top" alt="Featured Article">
-            <div class="card-body">
-              <a href="#" class="card-title text-xl font-bold text-gray-900 mb-2 hover:text-blue-600"
-                style="color: black;">Article Title</a>
-              <p class="card-text text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua.</p>
-              <a href="#" class="btn btn-primary mt-2 font-bold hover:underline">Read More</a>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
-            <img src="src/3.png" class="card-img-top rounded-top" alt="Featured Article">
-            <div class="card-body">
-              <a href="#" class="card-title text-xl font-bold text-gray-900 mb-2 hover:text-blue-600"
-                style="color: black;">Article Title</a>
-              <p class="card-text text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua.</p>
-              <a href="#" class="btn btn-primary mt-2 font-bold hover:underline">Read More</a>
-            </div>
-          </div>
+      h6 {
+        font-family: "Space Mono", monospace;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <!-- Google tag (gtag.js) -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-794EBZNLL1"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-794EBZNLL1");
+  </script>
+
+  <body>
+    <header>
+      <div id="google_translate_element" class="float-end"></div>
+
+      <script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement(
+            { pageLanguage: "en" },
+            "google_translate_element"
+          );
+        }
+      </script>
+
+      <script
+        type="text/javascript"
+        src="https://translate.google.com/translate_a/element.js?
+cb=googleTranslateElementInit"
+      ></script>
+    </header>
+
+    <nav class="navbar navbar-expand-lg bg-light shadow pe-5">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">MyWebClass</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav justify-content-end">
+            <li class="nav-item">
+              <a
+                class="nav-link active text-black"
+                aria-current="page"
+                href="index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-black" href="contentpage.html">Article</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-black" href="contact.html">Contact</a>
+            </li>
+          </ul>
         </div>
       </div>
+    </nav>
+
+    <div class="cookie-popup-container bg-secondary m-5 rounded p-3">
+      <div class="cookie-popup">
+        <p>
+          This website uses cookies to ensure you get the best experience on our
+          website.
+          <a
+            href="privacy.html"
+            class="text-dark"
+            alt="Learn more about why we collect cookies."
+            >Learn More</a
+          >
+        </p>
+        <button
+          class="btn btn-primary align-items-center"
+          id="accept-cookies-btn"
+        >
+          Accept Cookies
+        </button>
+      </div>
+      <script src="src/js/cookies.js"></script>
     </div>
-  </section>
 
-
-
-
-  <div class="spacer bg-secondary" style="padding: 5vh"></div>
-  <footer>
-    <section>
-      <div class="p-4 align-items-center pb-5 bg-primary shadow-lg" style="padding-top: 70px">
-        <div class="container">
-          <div class="row">
-            <div class="col">
-              <h5>About Us:</h5>
-              <ul class="list-group list-group-flush m-0 p-0">
-                <li class="list-item bg-primary" style="list-style: none">
-                  <a href="story.html" style="text-decoration: none; color: rgb(37, 37, 41)">Our Story</a>
-                </li>
-                <li class="list-item bg-primary" style="list-style: none">
-                  <a href="privacy2.html" style="color: rgb(37, 37, 41); text-decoration: none">Privacy Policy</a>
-                </li>
-              </ul>
+    <section class="top-header m-5 d-flex justify-content-center">
+      <div class="container my-5">
+        <div class="row p-4 pb-0 pe-lg-0 pt-lg-0 align-items-center">
+          <div class="col-lg-7 p-3 p-lg-3 pt-lg-1">
+            <h1 class="display-6 fw-bold lh-1 pt-5">
+              My Web Class: Revolutianized Teaching Solutions
+            </h1>
+            <p class="lead" style="font-family: 'Space Mono', monospace">
+              Empower your students with cutting-edge software engineering
+              skills. <br />Join MyWebClass and discover advanced technologies
+              that will transform your teaching and their learning journey.
+            </p>
+            <div
+              class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3"
+            >
+              <button
+                type="button"
+                class="btn btn-success btn-lg px-4 me-md-2 fw-bold"
+                style="background-color: blue"
+              >
+                <a href="contentpage.html" alt="Explore our articles"
+                  >Start Here</a
+                >
+              </button>
             </div>
-            <div class="col">
-              <h5>Our Social Media:</h5>
-              <ul class="list-group list-group-flush m-0 p-0">
-                <li class="list-item bg-primary" style="list-style: none">
-                  <a href="#" style="text-decoration: none; color: rgb(37, 37, 41)">Instagram</a>
-                </li>
-                <li class="list-item bg-primary" style="list-style: none">
-                  <a href="#" style="color: rgb(37, 37, 41); text-decoration: none">Twitter</a>
-                </li>
-                <li class="list-item bg-primary" style="list-style: none">
-                  <a href="#" style="color: rgb(37, 37, 41); text-decoration: none">Discord</a>
-                </li>
-              </ul>
+          </div>
+          <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden">
+            <img
+              class="img-fluid fade-in"
+              src="src/images/image-project1.jpg"
+              alt="A teacher instructing a student"
+              width="720px"
+              height="auto"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="spacer bg-secondary" style="padding: 2vh"></div>
+
+    <section class="py-5 bg-secondary">
+      <div class="container mx-auto">
+        <h2 class="text-3xl font-bold mb-4">Featured Articles</h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <div class="card h-100">
+              <img
+                src="src/1.png"
+                class="card-img-top rounded-top"
+                alt="Featured Article"
+              />
+              <div class="card-body">
+                <a
+                  href="#"
+                  class="card-title text-xl font-bold text-gray-900 mb-2 hover:text-blue-600"
+                  style="color: black"
+                  >Article Title</a
+                >
+                <p class="card-text text-gray-700">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+                <a
+                  href="contentpage.html"
+                  class="btn btn-primary mt-2 font-bold hover:underline"
+                  style="background-color: blue; color: white"
+                  >Read More</a
+                >
+              </div>
             </div>
-            <div class="col">
-              <form>
-                <h5>Subscribe to our newsletter</h5>
-                <p>Monthly digest of what's new and exciting from us.</p>
-                <div class="d-flex flex-column flex-sm-row w-100 gap-2">
-                  <label for="newsletter1" class="visually-hidden">Email address</label>
-                  <input id="newsletter1" type="text" class="form-control" placeholder="Email address" />
-                  <button class="btn" style="background-color: blue; color: white" type="button">
-                    Subscribe
-                  </button>
-                </div>
-              </form>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img
+                src="src/2.png"
+                class="card-img-top rounded-top"
+                alt="Featured Article"
+              />
+              <div class="card-body">
+                <a
+                  href="#"
+                  class="card-title text-xl font-bold text-gray-900 mb-2 hover:text-blue-600"
+                  style="color: black"
+                  >Article Title</a
+                >
+                <p class="card-text text-gray-700">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+                <a
+                  href="contentpage.html"
+                  class="btn btn-primary mt-2 font-bold hover:underline"
+                  style="background-color: blue; color: white"
+                  >Read More</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img
+                src="src/3.png"
+                class="card-img-top rounded-top"
+                alt="Featured Article"
+              />
+              <div class="card-body">
+                <a
+                  href="#"
+                  class="card-title text-xl font-bold text-gray-900 mb-2 hover:text-blue-600"
+                  style="color: black"
+                  >Article Title</a
+                >
+                <p class="card-text text-gray-700">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+                <a
+                  href="contentpage.html"
+                  class="btn btn-primary mt-2 font-bold hover:underline"
+                  style="background-color: blue; color: white"
+                  >Read More</a
+                >
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <div class="text-center text-black bg-primary">
-      <p>&copy; 2023 MyWebClass.org</p>
-    </div>
-  </footer>
 
-  <style>
-    .top-header {
-      animation: fadeInAnimation ease 3s;
-      animation-iteration-count: 1;
-      animation-fill-mode: forwards;
-    }
+    <div class="spacer bg-secondary" style="padding: 5vh"></div>
+    <footer>
+      <section>
+        <div
+          class="p-4 align-items-center pb-5 bg-primary shadow-lg"
+          style="padding-top: 70px"
+        >
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <h5>About Us:</h5>
+                <ul class="list-group list-group-flush m-0 p-0">
+                  <li class="list-item bg-primary" style="list-style: none">
+                    <a
+                      href="story.html"
+                      style="text-decoration: none; color: rgb(37, 37, 41)"
+                      >Our Story</a
+                    >
+                  </li>
+                  <li class="list-item bg-primary" style="list-style: none">
+                    <a
+                      href="privacy2.html"
+                      style="color: rgb(37, 37, 41); text-decoration: none"
+                      >Privacy Policy</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="col">
+                <h5>Our Social Media:</h5>
+                <ul class="list-group list-group-flush m-0 p-0">
+                  <li class="list-item bg-primary" style="list-style: none">
+                    <a
+                      href="#"
+                      style="text-decoration: none; color: rgb(37, 37, 41)"
+                      >Instagram</a
+                    >
+                  </li>
+                  <li class="list-item bg-primary" style="list-style: none">
+                    <a
+                      href="#"
+                      style="color: rgb(37, 37, 41); text-decoration: none"
+                      >Twitter</a
+                    >
+                  </li>
+                  <li class="list-item bg-primary" style="list-style: none">
+                    <a
+                      href="#"
+                      style="color: rgb(37, 37, 41); text-decoration: none"
+                      >Discord</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="col">
+                <form>
+                  <h5>Subscribe to our newsletter</h5>
+                  <p>Monthly digest of what's new and exciting from us.</p>
+                  <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                    <label for="newsletter1" class="visually-hidden"
+                      >Email address</label
+                    >
+                    <input
+                      id="newsletter1"
+                      type="text"
+                      class="form-control"
+                      placeholder="Email address"
+                    />
+                    <button
+                      class="btn"
+                      style="background-color: blue; color: white"
+                      type="button"
+                    >
+                      Subscribe
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="text-center text-black bg-primary">
+        <p>&copy; 2023 MyWebClass.org</p>
+      </div>
+    </footer>
 
-    @keyframes fadeInAnimation {
-      0% {
-        opacity: 0;
+    <style>
+      .top-header {
+        animation: fadeInAnimation ease 3s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
       }
 
-      100% {
-        opacity: 1;
+      @keyframes fadeInAnimation {
+        0% {
+          opacity: 0;
+        }
+
+        100% {
+          opacity: 1;
+        }
       }
-    }
-  </style>
+    </style>
 
-  <!-- ---------------------------------------------------------------------------------------------------------->
-  <script src="src/js/main.js"></script>
-  <script src="/src/js/cookies.js"></script>
-  <!-- ---------------------------------------------------------------------------------------------------------->
-</body>
-
+    <!-- ---------------------------------------------------------------------------------------------------------->
+    <script src="src/js/main.js"></script>
+    <script src="/src/js/cookies.js"></script>
+    <!-- ---------------------------------------------------------------------------------------------------------->
+  </body>
 </html>
