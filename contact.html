@@ -1,52 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MyWebClass.org</title>
 
-    <meta name="keywords" content="My Webclass Contact Page">
-    <meta name="authors" content = "Dennis Boguslavskiy Paul W">
-    <meta name="description" content = "Contact MyWebClass for support or questions.">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyWebClass.org</title>
+
+  <meta name="keywords" content="My Webclass Contact Page">
+  <meta name="authors" content="Dennis Boguslavskiy Paul W">
+  <meta name="description" content="Contact MyWebClass for support or questions.">
   <!-- ---------------------------------------------------------------------------------------------------------->
-    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
   <!-- ---------------------------------------------------------------------------------------------------------->
 
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
-  
+
     h1 {
       font-family: 'Space Mono', monospace;
       font-weight: bold;
     }
-  
+
     h2 {
       font-family: 'Space Mono', monospace;
       font-weight: bold;
     }
-  
+
     h3 {
       font-family: 'Space Mono', monospace;
       font-weight: bold;
     }
-  
+
     h4 {
       font-family: 'Space Mono', monospace;
       font-weight: bold;
     }
-  
+
     h5 {
       font-family: 'Space Mono', monospace;
       font-weight: bold;
     }
-  
+
     h6 {
       font-family: 'Space Mono', monospace;
       font-weight: bold;
     }
   </style>
 </head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-794EBZNLL1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-794EBZNLL1');
+</script>
+
+
 <body>
   <!--Nav-->
   <nav class="navbar navbar-expand-lg bg-light shadow pe-5">
@@ -72,76 +84,84 @@
     </div>
   </nav>
 
-      <!--Nav-->
-      <div class="bg-secondary p-5">
-        <form class="">
-          <div class="p-4 text-center">
-              <h3>Contact Form</h3>
-          </div>
-          <div class="row p-4" >
-              <div class="col">
-                  <input class="form-control" id="name" placeholder="Name" type="text">
-              </div>
-              <div class="col">
-                  <input class="form-control" id="name" placeholder="Last Name" type="text">
-              </div>
-          </div>
-          <div class="row p-4">
-              <div class="col">
-                  <input class="form-control" id="Email" placeholder="Email" type="text">
-              </div>
-          </div>
-          <div class="row p-4">
-              <div class="col input-group">
-                  <textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder="Enter your message: "></textarea>
-              </div>
-          </div>
-          <div class="text-center">
-              <button class="btn p-2 pe-4 ps-4 m-3 text-center shadow text-white" style="background-color: blue;" type="button">Submit</button>
-          </div>
-        </form>
-    </div>
-    <!--Footer-->
-    <footer>
-        <section>
-            <div class="p-4 align-items-center pb-5 bg-primary shadow-lg" style="padding-top: 70px;" >
-                 <div class="container">
-                    <div class="row">
-                        <div class="col">
-                            <h5>About Us:</h5>
-                            <ul class="list-group list-group-flush m-0 p-0">
-                                <li class="list-item bg-primary" style="list-style: none;"><a href="story.html" style="text-decoration: none; color: rgb(37,37,41);">Our Story</a></li>
-                                <li class="list-item bg-primary" style="list-style: none;"><a href="privacy.html" style="color: rgb(37,37,41);; text-decoration: none;">Privacy Policy</a></li>
-                            </ul>
-                        </div>
-                        <div class="col">
-                            <h5>Our Social Media:</h5>
-                            <ul class="list-group list-group-flush m-0 p-0">
-                                <li class="list-item bg-primary" style="list-style: none;"><a href="#" style="text-decoration: none; color: rgb(37,37,41);">Instagram</a></li>
-                                <li class="list-item bg-primary" style="list-style: none;"><a href="#" style="color: rgb(37,37,41);; text-decoration: none;">Twitter</a></li>
-                                <li class="list-item bg-primary" style="list-style: none;"><a href="#" style="color: rgb(37,37,41); text-decoration: none;">Discord</a></li>
-                            </ul>
-                        </div>
-                        <div class="col">
-                            <form>
-                                <h5>Subscribe to our newsletter</h5>
-                                <p>Monthly digest of what's new and exciting from us.</p>
-                                <div class="d-flex flex-column flex-sm-row w-100 gap-2">
-                                    <label for="newsletter1" class="visually-hidden">Email address</label>
-                                    <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
-                                    <button class="btn" style="background-color: blue; color: white;" type="button">Subscribe</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                 </div>
+  <!--Nav-->
+  <div class="bg-secondary p-5">
+    <form class="">
+      <div class="p-4 text-center">
+        <h3>Contact Form</h3>
+      </div>
+      <div class="row p-4">
+        <div class="col">
+          <input class="form-control" id="name" placeholder="Name" type="text">
+        </div>
+        <div class="col">
+          <input class="form-control" id="name" placeholder="Last Name" type="text">
+        </div>
+      </div>
+      <div class="row p-4">
+        <div class="col">
+          <input class="form-control" id="Email" placeholder="Email" type="text">
+        </div>
+      </div>
+      <div class="row p-4">
+        <div class="col input-group">
+          <textarea name="message" id="message" cols="30" rows="10" class="form-control"
+            placeholder="Enter your message: "></textarea>
+        </div>
+      </div>
+      <div class="text-center">
+        <button class="btn p-2 pe-4 ps-4 m-3 text-center shadow text-white" style="background-color: blue;"
+          type="button">Submit</button>
+      </div>
+    </form>
+  </div>
+  <!--Footer-->
+  <footer>
+    <section>
+      <div class="p-4 align-items-center pb-5 bg-primary shadow-lg" style="padding-top: 70px;">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <h5>About Us:</h5>
+              <ul class="list-group list-group-flush m-0 p-0">
+                <li class="list-item bg-primary" style="list-style: none;"><a href="story.html"
+                    style="text-decoration: none; color: rgb(37,37,41);">Our Story</a></li>
+                <li class="list-item bg-primary" style="list-style: none;"><a href="privacy.html"
+                    style="color: rgb(37,37,41);; text-decoration: none;">Privacy Policy</a></li>
+              </ul>
             </div>
-            </section>
-            <div id="spacer" class="bg-primary" style=" padding: 3vh;"></div>
-    </footer>
-    
-<!-- ---------------------------------------------------------------------------------------------------------->
-    <script src=".assets/js/main.js"></script>
-<!-- ---------------------------------------------------------------------------------------------------------->
+            <div class="col">
+              <h5>Our Social Media:</h5>
+              <ul class="list-group list-group-flush m-0 p-0">
+                <li class="list-item bg-primary" style="list-style: none;"><a href="#"
+                    style="text-decoration: none; color: rgb(37,37,41);">Instagram</a></li>
+                <li class="list-item bg-primary" style="list-style: none;"><a href="#"
+                    style="color: rgb(37,37,41);; text-decoration: none;">Twitter</a></li>
+                <li class="list-item bg-primary" style="list-style: none;"><a href="#"
+                    style="color: rgb(37,37,41); text-decoration: none;">Discord</a></li>
+              </ul>
+            </div>
+            <div class="col">
+              <form>
+                <h5>Subscribe to our newsletter</h5>
+                <p>Monthly digest of what's new and exciting from us.</p>
+                <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                  <label for="newsletter1" class="visually-hidden">Email address</label>
+                  <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                  <button class="btn" style="background-color: blue; color: white;" type="button">Subscribe</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div id="spacer" class="bg-primary" style=" padding: 3vh;"></div>
+  </footer>
+
+  <!-- ---------------------------------------------------------------------------------------------------------->
+  <script src=".assets/js/main.js"></script>
+  <!-- ---------------------------------------------------------------------------------------------------------->
 </body>
+
 </html>
