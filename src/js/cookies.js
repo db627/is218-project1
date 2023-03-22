@@ -8,7 +8,6 @@ function setCookie(name, value, days) {
   document.cookie = name + "=" + value + expires + "; path=/";
 }
 
-
 function getCookie(name) {
   const value = "; " + document.cookie;
   const parts = value.split("; " + name + "=");
@@ -16,11 +15,9 @@ function getCookie(name) {
   return null;
 }
 
-
 function checkCookie(name) {
   return getCookie(name) !== null;
 }
-
 
 function showCookiePopup() {
   if (!checkCookie("cookies_accepted")) {
@@ -28,8 +25,6 @@ function showCookiePopup() {
     cookiePopup.style.display = "block";
   }
 }
-
-
 document
   .getElementById("accept-cookies-btn")
   .addEventListener("click", function () {
@@ -38,5 +33,16 @@ document
     cookiePopup.style.display = "none";
   });
 
+const declineButton = document.createElement("button");
+declineButton.innerText = "Decline";
+declineButton.classList.add("btn", "btn-secondary", "align-items-center", "ms-2");
+document.querySelector(".cookie-popup").appendChild(declineButton);
+
+declineButton.addEventListener("click", function () {
+  setCookie("cookies_accepted", "false", 30);
+  const cookiePopup = document.querySelector(".cookie-popup-container");
+  cookiePopup.style.display = "none";
+});
 
 showCookiePopup();
+
