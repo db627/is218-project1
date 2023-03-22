@@ -33,7 +33,7 @@ document
     cookiePopup.style.display = "none";
   });
 
-const declineButton = document.createElement("button");
+const declineButton = document.getElementById("button");
 declineButton.innerText = "Decline";
 declineButton.classList.add("btn", "btn-secondary", "align-items-center", "ms-2");
 document.querySelector(".cookie-popup").appendChild(declineButton);
