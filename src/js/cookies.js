@@ -1,37 +1,42 @@
-document.addEventListener("DOMContentLoaded", function(){
-  var acceptCookiesBtn = document.getElementById('accept-cookies-btn');
-  acceptCookiesBtn.addEventListener("click", function(){
-    setCookie('cookiesAccepted', true, 30);
-    hideCookiePopup();
-  });
-
-  if (getCookie('cookiesAccepted') === 'true') {
-    hideCookiePopup();
-  }
-});
-
 function setCookie(name, value, days) {
-  var expires = "";
+  let expires = "";
   if (days) {
-    var date = new Date();
-    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+    const date = new Date();
+    date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
     expires = "; expires=" + date.toUTCString();
   }
-  document.cookie = name + "=" + (value || "") + expires + "; path=/";
+  document.cookie = name + "=" + value + expires + "; path=/";
 }
 
+
 function getCookie(name) {
-  var nameEQ = name + "=";
-  var ca = document.cookie.split(';');
-  for(var i=0;i < ca.length;i++) {
-    var c = ca[i];
-    while (c.charAt(0)==' ') c = c.substring(1,c.length);
-    if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
-  }
+  const value = "; " + document.cookie;
+  const parts = value.split("; " + name + "=");
+  if (parts.length === 2) return parts.pop().split(";").shift();
   return null;
 }
 
-function hideCookiePopup() {
-  var cookiePopupContainer = document.querySelector('.cookie-popup-container');
-  cookiePopupContainer.style.display = 'none';
+
+function checkCookie(name) {
+  return getCookie(name) !== null;
 }
+
+
+function showCookiePopup() {
+  if (!checkCookie("cookies_accepted")) {
+    const cookiePopup = document.querySelector(".cookie-popup-container");
+    cookiePopup.style.display = "block";
+  }
+}
+
+
+document
+  .getElementById("accept-cookies-btn")
+  .addEventListener("click", function () {
+    setCookie("cookies_accepted", "true", 30);
+    const cookiePopup = document.querySelector(".cookie-popup-container");
+    cookiePopup.style.display = "none";
+  });
+
+
+showCookiePopup();
