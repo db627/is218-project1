@@ -24,6 +24,10 @@ function showCookiePopup() {
     const cookiePopup = document.querySelector(".cookie-popup-container");
     cookiePopup.style.display = "block";
   }
+  else if(!checkCookie("cookies_declined")){
+    const cookiePopup = document.querySelector(".cookie-popup-container");
+    cookiePopup.style.display = "block";
+  }
 }
 
 document
@@ -34,15 +38,12 @@ document
     cookiePopup.style.display = "none";
   });
 
-const declineButton = document.createElement("button"); // Create a new "Decline" button element
-declineButton.innerText = "Decline";
-declineButton.classList.add("btn", "btn-secondary", "align-items-center", "ms-2");
-document.querySelector(".cookie-popup").appendChild(declineButton);
-
-declineButton.addEventListener("click", function () {
-  setCookie("cookies_accepted", "false", -1); // Set the "cookies_accepted" cookie to "false" and set the expiration date to the past, which will remove the cookie
-  const cookiePopup = document.querySelector(".cookie-popup-container");
-  cookiePopup.style.display = "none";
-});
+document
+  .getElementById("decline-cookies-btn")
+  .addEventListener("click", function () {
+    setCookies("cookie_declined", "false", 30 );
+    const cookiePopup = document.querySelector(".cookie-popup-container");
+    cookiePopup.style.display = "none";
+    })
 
 showCookiePopup();
