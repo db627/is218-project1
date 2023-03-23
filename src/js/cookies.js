@@ -20,11 +20,7 @@ function checkCookie(name) {
 }
 
 function showCookiePopup() {
-  if (!checkCookie("cookies_accepted")) {
-    const cookiePopup = document.querySelector(".cookie-popup-container");
-    cookiePopup.style.display = "block";
-  }
-  else if(!checkCookie("cookies_declined")){
+  if (!checkCookie("cookies_accepted") || !checkCookie("cookies_declined")) {
     const cookiePopup = document.querySelector(".cookie-popup-container");
     cookiePopup.style.display = "block";
   }
