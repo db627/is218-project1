@@ -25,6 +25,7 @@ function showCookiePopup() {
     cookiePopup.style.display = "block";
   }
 }
+
 document
   .getElementById("accept-cookies-btn")
   .addEventListener("click", function () {
@@ -39,7 +40,7 @@ declineButton.classList.add("btn", "btn-secondary", "align-items-center", "ms-2"
 document.querySelector(".cookie-popup").appendChild(declineButton);
 
 declineButton.addEventListener("click", function () {
-  setCookie("cookies_accepted", "false", 30); // Set the "cookies_accepted" cookie to "false"
+  setCookie("cookies_accepted", "false", -1); // Set the "cookies_accepted" cookie to "false" and set the expiration date to the past, which will remove the cookie
   const cookiePopup = document.querySelector(".cookie-popup-container");
   cookiePopup.style.display = "none";
 });
