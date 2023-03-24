@@ -3,7 +3,10 @@ name: Docker Build
 on:
   push:
     branches:
-      - main
+      - master
+
+env:
+  DOCKER-REPO-NAME: db627/mywebclass-project1
 
 jobs:
   build:
