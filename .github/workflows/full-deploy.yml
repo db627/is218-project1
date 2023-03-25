@@ -1,86 +1,59 @@
-name: Test, Build, and Deploy
+name: Test, Build, and Push Image to Docker
 
 on:
   push:
     branches:
       - 'master'
-  pull_request:
+    tags:
+      - 'v*'
 
 env:
   DOCKER_REPO_NAME: db627/mywebclass-project1
-  DOCKER_IMAGE_TAG: latest
-  GH_PAGES_BRANCH: gh-pages
 
 jobs:
-  test:
+  build-and-push:
     runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: ["lts/*"]
-
+    
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-
-    - name: Install dependencies
-      run: npm install
-
-    - name: Run Playwright tests
-      run: npx playwright test
-
-  build:
-    runs-on: ubuntu-latest
-    needs: test
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-
-    - name: Cache dependencies
-      uses: actions/cache@v2
-      with:
-        path: |
-          ~/.npm
-          ~/.cache
-          ./node_modules
-        key: ${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
-        restore-keys: ${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
-
-    - name: Login to DockerHub
-      uses: docker/login-action@v1
-      with:
-        username: ${{ secrets.DOCKER_USERNAME }}
-        password: ${{ secrets.DOCKER_PASSWORD }}
-
-    - name: Build and push Docker image
-      uses: docker/build-push-action@v2
-      with:
-        context: .
-        push: true
-        tags: ${{ env.DOCKER_REPO_NAME }}:${{ env.DOCKER_IMAGE_TAG }}
-
-  deploy:
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-      with:
-        ref: ${{ env.GH_PAGES_BRANCH }}
-
-    - name: Copy files from build
-      run: cp -r ../dist/* .
-
-    - name: Commit and push changes
-      uses: EndBug/add-and-commit@v8
-      with:
-        author_name: GitHub Actions
-        author_email: actions@github.com
-        message: "Deploy to GitHub Pages"
-        add: "."
-        force: true
-
-    - name: Push changes to GitHub Pages branch
-      uses: ad-m/github-push-action@v0.6.0
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: ${{ env.GH_PAGES_BRANCH }}
+      - name: Checkout code
+        uses: actions/checkout@v2
+      
+      - name: Cache dependencies
+        uses: actions/cache@v2
+        with:
+          path: |
+            ~/.cache
+            ./node_modules
+          key: ${{ runner.os }}-${{ env.DOCKER_REPO_NAME }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: ${{ runner.os }}-${{ env.DOCKER_REPO_NAME }}-
+      
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+      
+      - name: Install dependencies
+        run: |
+          npm ci
+          npx playwright install-deps
+          
+      - name: Run Playwright tests
+        run: |
+          npx playwright install
+          npx playwright test --config=playwright.config.js
+          
+      - name: Login to Docker Hub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          push: true
+          tags: ${{ env.DOCKER_REPO_NAME }}:${{ github.sha }}
