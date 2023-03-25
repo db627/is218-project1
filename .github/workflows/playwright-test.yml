@@ -3,7 +3,7 @@ name: Playwright Test
 on:
   push:
     branches:
-      - master/tests
+      - master
 
 jobs:
   test:
