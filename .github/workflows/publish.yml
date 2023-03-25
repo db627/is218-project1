@@ -4,9 +4,6 @@ on:
   push:
     branches:
       - 'master'
-      - 'development'
-    tags:
-      - 'v*'
 
 env:
   DOCKER_REPO_NAME: db627/mywebclass-project1
