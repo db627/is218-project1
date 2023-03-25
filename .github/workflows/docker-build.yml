@@ -28,3 +28,5 @@ jobs:
         context: .
         push: true
         tags: db627/is218-project1:latest
+
+
