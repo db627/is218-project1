@@ -1,9 +1,9 @@
-name: Test, Build, and Push Image to Docker
+name: Docker Build
 
 on:
   push:
     branches:
-      - 'master'
+      - master
 
 env:
   DOCKER_REPO_NAME: db627/mywebclass-project1
