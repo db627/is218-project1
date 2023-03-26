@@ -1,4 +1,4 @@
-name: Docker Build
+name: Playwright test and record lighthouse video
 
 on:
   push:
