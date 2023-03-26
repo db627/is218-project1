@@ -20,7 +20,7 @@ function checkCookie(name) {
 }
 
 function showCookiePopup() {
-  if (!checkCookie("cookies_accepted") && !checkCookie("cookies_declined")) {
+  if (!checkCookie("cookies_accepted") || !checkCookie("cookies_declined")) {
     const cookiePopup = document.querySelector(".cookie-popup-container");
     cookiePopup.style.display = "block";
   }
@@ -37,7 +37,7 @@ document
 document
   .getElementById("decline-cookies-btn")
   .addEventListener("click", function () {
-    setCookies("cookie_declined", "false", 30 );
+    setCookies("cookies_declined", "false", 30 );
     const cookiePopup = document.querySelector(".cookie-popup-container");
     cookiePopup.style.display = "none";
     })
