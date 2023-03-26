@@ -26,6 +26,7 @@ function showCookiePopup() {
   }
 }
 
+
 document
   .getElementById("accept-cookies-btn")
   .addEventListener("click", function () {
