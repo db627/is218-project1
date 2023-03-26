@@ -20,7 +20,7 @@ function checkCookie(name) {
 }
 
 function showCookiePopup() {
-  if (!checkCookie("cookies_accepted") || checkCookie("cookie_declined")) {
+  if (!checkCookie("cookies_accepted") && !checkCookie("cookie_declined")) {
     const cookiePopup = document.querySelector(".cookie-popup-container");
     cookiePopup.style.display = "block";
   }
@@ -30,6 +30,7 @@ document
   .getElementById("accept-cookies-btn")
   .addEventListener("click", function () {
     setCookie("cookies_accepted", "true", 30);
+    localStorage.setItem("cookies_enabled", "true");
     const cookiePopup = document.querySelector(".cookie-popup-container");
     cookiePopup.style.display = "none";
   });
@@ -37,9 +38,10 @@ document
 document
   .getElementById("decline-cookies-btn")
   .addEventListener("click", function () {
-    setCookies("cookie_declined", "false", 30 );
+    setCookie("cookie_declined", "true", 30);
+    localStorage.setItem("cookies_enabled", "false");
     const cookiePopup = document.querySelector(".cookie-popup-container");
     cookiePopup.style.display = "none";
-    })
+  });
 
 showCookiePopup();

@@ -20,11 +20,12 @@ function checkCookie(name) {
 }
 
 function showCookiePopup() {
-  if (!checkCookie("cookies_accepted")) {
+  if (!checkCookie("cookies_accepted") || !checkCookie("cookie_declined")) {
     const cookiePopup = document.querySelector(".cookie-popup-container");
     cookiePopup.style.display = "block";
   }
 }
+
 document
   .getElementById("accept-cookies-btn")
   .addEventListener("click", function () {
@@ -33,16 +34,12 @@ document
     cookiePopup.style.display = "none";
   });
 
-const declineButton = document.getElementById("button");
-declineButton.innerText = "Decline";
-declineButton.classList.add("btn", "btn-secondary", "align-items-center", "ms-2");
-document.querySelector(".cookie-popup").appendChild(declineButton);
-
-declineButton.addEventListener("click", function () {
-  setCookie("cookies_accepted", "false", 30);
-  const cookiePopup = document.querySelector(".cookie-popup-container");
-  cookiePopup.style.display = "none";
-});
+document
+  .getElementById("decline-cookies-btn")
+  .addEventListener("click", function () {
+    setCookies("cookie_declined", "false", 30 );
+    const cookiePopup = document.querySelector(".cookie-popup-container");
+    cookiePopup.style.display = "none";
+    })
 
 showCookiePopup();
-
