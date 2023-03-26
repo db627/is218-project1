@@ -1,10 +1,9 @@
-name: Run Playwright and Generate a video, screenshots, and LightHouse HTML Report
+name: Docker Build
 
 on:
   push:
-    branches: "*"
-  workflow_dispatch:
-
+    branches:
+      - master
 jobs:
   build:
     runs-on: ubuntu-latest
