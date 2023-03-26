@@ -26,7 +26,6 @@ function showCookiePopup() {
   }
 }
 
-
 document
   .getElementById("accept-cookies-btn")
   .addEventListener("click", function () {
@@ -38,7 +37,7 @@ document
 document
   .getElementById("decline-cookies-btn")
   .addEventListener("click", function () {
-    setCookies("cookies_declined", "false", 30 );
+    setCookies("cookie_declined", "false", 30 );
     const cookiePopup = document.querySelector(".cookie-popup-container");
     cookiePopup.style.display = "none";
     })
