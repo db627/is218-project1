@@ -1,9 +1,9 @@
-name: Playwright test
+name: Build and Test Docker Image
 
 on:
   push:
-    branches:
-      - master
+  pull_request:
+
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
@@ -19,4 +19,4 @@ jobs:
       - name: Install playwright browsers
         run: npx playwright install --with-deps
       - name: Run tests
-        run: npx playwright test --timeout=60000
+        run: npx playwright test

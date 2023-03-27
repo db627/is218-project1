@@ -1,9 +1,10 @@
-name: Playwright test and record lighthouse video
+name: Run Playwright and Generate a video, screenshots, and LightHouse HTML Report
 
 on:
   push:
-    branches:
-      - master
+    branches: "*"
+  workflow_dispatch:
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -23,10 +24,12 @@ jobs:
           npm ci
           npx playwright install chromium
           npm install -g lighthouse chrome-launcher axe-core chromium wait-on
+
       - name: Start the application
         run: |
           export DISPLAY=:1
           npm run start & npx wait-on http://localhost:3000
+
       - name: Run Playwright tests
         run: npx playwright test --config=playwright.config.js
 

@@ -1,12 +1,15 @@
-name: Test, build, and deploy
+name: Test, Build, and Push Image to Docker
 
 on:
   push:
     branches:
-      - master
+      - 'master'
+      - 'development'
+    tags:
+      - 'v*'
 
 env:
-  DOCKER_REPO_NAME: db627/mywebclass-project1
+  DOCKER_REPO_NAME: kaw393939/mywebclass
 
 jobs:
   build:
