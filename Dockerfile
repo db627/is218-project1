@@ -1,20 +1,30 @@
-# Use an official Node.js runtime as a parent image
-FROM node:16
+# syntax=docker/dockerfile:1.3
+# Use a multiarch Node.js runtime as a parent image
+FROM --platform=$BUILDPLATFORM node:latest AS builder
 
 # Set the working directory to /app
 WORKDIR /app
 
-# Copy package.json and package-lock.json to the container
+# Copy the package.json and package-lock.json files to the container
 COPY package*.json ./
 
 # Install dependencies
 RUN npm install
 
-# Copy the rest of the code to the container
+# Copy the rest of the application code to the container
 COPY . .
 
-# Expose port 3000 for the server
-EXPOSE 3000
+# Build the webpack site and output it to the docs directory
+RUN npm run build
 
-# Start the server when the container is launched
-CMD [ "npm", "start" ]
+# Use a multiarch Nginx runtime as a parent image
+FROM --platform=$TARGETPLATFORM nginx:latest
+
+# Copy the output of the webpack build from the builder stage to the nginx image
+COPY --from=builder /app/docs /usr/share/nginx/html
+
+# Expose port 80 for HTTP traffic
+EXPOSE 80
+
+# Start the nginx server
+CMD ["nginx", "-g", "daemon off;"]
